@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#060e1a" name="theme-color"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <title>Informatique — SG</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="page-transition">
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <div class="intro-screen intro-screen-sub" id="intro-screen">
+    <div class="intro-grid-lines"></div>
+    <div class="intro-beam intro-beam-a"></div>
+    <div class="intro-beam intro-beam-b"></div>
+    <div class="intro-core"></div>
+    <div class="intro-ring intro-ring-a"></div>
+    <div class="intro-ring intro-ring-b"></div>
+    <img alt="SG logo" class="intro-logo" src="logo.png"/>
+    <div class="intro-title">Informatique</div>
+  </div>
+
+  <canvas aria-hidden="true" id="particles"></canvas>
+  <div aria-hidden="true" class="screen-noise"></div>
+  <div aria-hidden="true" class="halo halo-left"></div>
+  <div aria-hidden="true" class="halo halo-right"></div>
+  <div aria-hidden="true" class="page-flash"></div>
+
+  <div aria-hidden="true" class="fusion-transition" id="fusion-transition">
+    <div class="fusion-stage">
+      <div class="fusion-glow"></div>
+      <img alt="" class="fusion-logo fusion-logo-sg" src="logo.png"/>
+      <img alt="" class="fusion-logo fusion-logo-target" id="fusion-target-logo" src="logo.png"/>
+      <div class="fusion-line fusion-line-a"></div>
+      <div class="fusion-line fusion-line-b"></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand nav-link-transition" data-target-logo="logo.png" href="index.html">
+        <img alt="Logo SG" src="logo.png"/>
+        <div><strong>SG</strong><span>Sid Ali GRINE</span></div>
+      </a>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button aria-label="Changer le thème" class="theme-toggle" id="theme-toggle" type="button">☀️</button>
+        <button aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰</button>
+      </div>
+      <nav aria-label="Navigation principale" class="nav-links" id="main-navigation">
+        <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+        <a class="nav-link-transition is-active" data-target-logo="xefi.png" href="informatique.html">Univers Informatique</a>
+        <a class="nav-link-transition" data-target-logo="lions.png" href="humour.html">Univers Événementiel</a>
+        <a class="nav-link-transition" data-target-logo="ecole_mosquee.png" href="mosquee.html">Univers Culturel</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main" id="main-content">
+
+    <!-- Hero -->
+    <section class="subhero">
+      <div class="container subhero-grid">
+        <div class="subhero-copy reveal hero-entrance">
+          <p class="section-tag">Univers Informatique</p>
+          <h1>Informatique</h1>
+          <p>
+            Univers Informatique que je partage avec la société XEFI, partenaire informatique de proximité pour les TPE/PME.
+            Plus qu'un univers, une passion d'enfance qui en est devenue mon métier.
+          </p>
+          <a class="btn btn-primary nav-link-transition" data-target-logo="logo.png" href="index.html">← Retour à l'accueil</a>
+        </div>
+        <div class="hero-visual reveal hero-entrance-delay">
+          <div class="hero-core-glow"></div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="ring ring-4"></div>
+          <img alt="XEFI Logo" class="hero-logo" src="xefi.png"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chiffres clés IT -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Windows Server</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Active Directory</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">GLPI / Ticketing</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Déploiement MDT</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Support N2/N3</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Gestion de parc</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Réseau TCP/IP</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Sécurité SI</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Management terrain</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">SLA & reporting</span><span class="ticker-dot">◆</span>
+        <!-- Duplicate for loop -->
+        <span class="ticker-item">Windows Server</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Active Directory</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">GLPI / Ticketing</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Déploiement MDT</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Support N2/N3</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Gestion de parc</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Réseau TCP/IP</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Sécurité SI</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Management terrain</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">SLA & reporting</span><span class="ticker-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- Counters -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="counters-strip reveal">
+          <div class="counter-item">
+            <span class="counter-value" data-target="4" data-suffix="+">0+</span>
+            <span class="counter-label">Années d'expérience XEFI</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="4" data-suffix="">0</span>
+            <span class="counter-label">Techniciens sous coordination</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="3" data-suffix="">0</span>
+            <span class="counter-label">Secteurs couverts</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="100" data-suffix="+">0+</span>
+            <span class="counter-label">Établissements accompagnés</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Présentation -->
+    <section class="section">
+      <div class="container">
+        <p class="section-tag">Présentation</p>
+        <h2>Quand la passion devient travail.</h2>
+
+        <div class="content-grid vertical-premium">
+
+          <div class="content-card reveal premium-block about-block">
+            <span class="block-kicker">Présentation</span>
+            <h3>À propos</h3>
+            <p>
+              J'ai rejoint la société XEFI en 2021 en tant que technicien conseil sur le projet AURA. Ce projet consiste à assurer la maintenance des infrastructures informatiques ainsi que la mise en œuvre des solutions IT pour les lycées publics, professionnels et agricoles de la région Auvergne-Rhône-Alpes.
+            </p>
+            <p>
+              Après trois années d'expérience, j'ai évolué vers un poste de Team Leader, fonction que j'occupe aujourd'hui avec engagement et fierté. En complément de mes missions techniques, je coordonne et planifie les interventions d'une équipe de quatre techniciens expérimentés sur le secteur de Saint-Étienne, Vienne et Valence.
+            </p>
+            <p>
+              À ce titre, j'assure l'organisation et la priorisation des interventions en fonction des urgences et des contraintes terrain, tout en veillant au respect des délais et à la qualité de service. J'accompagne les techniciens dans leurs missions quotidiennes, apporte un support technique en cas de situations complexes et veille à la bonne circulation de l'information au sein de l'équipe.
+            </p>
+            <p>
+              Je suis également garant du suivi des interventions, de la satisfaction des établissements et de l'amélioration continue des pratiques, en lien avec les exigences du projet AURA.
+            </p>
+          </div>
+
+          <div class="content-card reveal premium-block responsibilities-block">
+            <span class="block-kicker">Organisation</span>
+            <h3>Mes principales responsabilités</h3>
+            <div class="responsibility-groups">
+              <div class="responsibility-group">
+                <h4>Management &amp; organisation</h4>
+                <ul class="content-list">
+                  <li>Coordination et planification des interventions</li>
+                  <li>Pilotage opérationnel de l'équipe technique</li>
+                  <li>Gestion des priorités et des urgences terrain</li>
+                  <li>Suivi et reporting des interventions</li>
+                  <li>Respect des procédures et des engagements de service (SLA)</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Technique &amp; exploitation</h4>
+                <ul class="content-list">
+                  <li>Gestion et maintien en condition opérationnelle du parc informatique</li>
+                  <li>Administration des environnements utilisateurs (postes, comptes, accès)</li>
+                  <li>Paramétrage et configuration des postes de travail</li>
+                  <li>Déploiement et gestion des applications</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Support &amp; incidents</h4>
+                <ul class="content-list">
+                  <li>Support technique de niveau 2 / 3</li>
+                  <li>Gestion des incidents et des demandes utilisateurs</li>
+                  <li>Diagnostic et résolution des anomalies</li>
+                  <li>Escalade et suivi des incidents critiques</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Relation client &amp; amélioration continue</h4>
+                <ul class="content-list">
+                  <li>Conseil, accompagnement et relation client</li>
+                  <li>Formation et accompagnement des utilisateurs</li>
+                  <li>Suivi des performances et amélioration continue</li>
+                  <li>Veille au niveau de satisfaction des établissements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card reveal premium-block skills-block">
+            <span class="block-kicker">Expertise</span>
+            <h3>Compétences</h3>
+            <div class="skills-pills">
+              <span class="skill-pill">Management et coordination d'équipe technique</span>
+              <span class="skill-pill">Planification et gestion des interventions</span>
+              <span class="skill-pill">Maintenance et gestion de parc informatique</span>
+              <span class="skill-pill">Administration systèmes et postes de travail</span>
+              <span class="skill-pill">Déploiement et gestion d'applications</span>
+              <span class="skill-pill">Support technique niveau 2 / 3</span>
+              <span class="skill-pill">Gestion des incidents</span>
+              <span class="skill-pill">Sécurité des systèmes et des réseaux</span>
+              <span class="skill-pill">Relation client et accompagnement utilisateurs</span>
+              <span class="skill-pill">Suivi de performance et amélioration continue</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button aria-label="Retour en haut" class="back-to-top" id="back-to-top" type="button">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SG — Sid Ali GRINE</strong>
+        <p>Pôle Informatique — XEFI / Projet AURA</p>
+      </div>
+      <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#060e1a" name="theme-color"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <title>Culture — SG</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="page-transition page-mosquee">
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <div class="intro-screen intro-screen-sub" id="intro-screen">
+    <div class="intro-grid-lines"></div>
+    <div class="intro-beam intro-beam-a"></div>
+    <div class="intro-beam intro-beam-b"></div>
+    <div class="intro-core"></div>
+    <div class="intro-ring intro-ring-a"></div>
+    <div class="intro-ring intro-ring-b"></div>
+    <img alt="SG logo" class="intro-logo" src="logo.png"/>
+    <div class="intro-title">Culture</div>
+  </div>
+
+  <canvas aria-hidden="true" id="particles"></canvas>
+  <div aria-hidden="true" class="screen-noise"></div>
+  <div aria-hidden="true" class="halo halo-left"></div>
+  <div aria-hidden="true" class="halo halo-right"></div>
+  <div aria-hidden="true" class="page-flash"></div>
+
+  <div aria-hidden="true" class="fusion-transition" id="fusion-transition">
+    <div class="fusion-stage">
+      <div class="fusion-glow"></div>
+      <img alt="" class="fusion-logo fusion-logo-sg" src="logo.png"/>
+      <img alt="" class="fusion-logo fusion-logo-target" id="fusion-target-logo" src="logo.png"/>
+      <div class="fusion-line fusion-line-a"></div>
+      <div class="fusion-line fusion-line-b"></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand nav-link-transition" data-target-logo="logo.png" href="index.html">
+        <img alt="Logo SG" src="logo.png"/>
+        <div><strong>SG</strong><span>Sid Ali GRINE</span></div>
+      </a>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button aria-label="Changer le thème" class="theme-toggle" id="theme-toggle" type="button">☀️</button>
+        <button aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰</button>
+      </div>
+      <nav aria-label="Navigation principale" class="nav-links" id="main-navigation">
+        <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+        <a class="nav-link-transition" data-target-logo="xefi.png" href="informatique.html">Univers Informatique</a>
+        <a class="nav-link-transition" data-target-logo="lions.png" href="humour.html">Univers Événementiel</a>
+        <a class="nav-link-transition is-active" data-target-logo="ecole_mosquee.png" href="mosquee.html">Univers Culturel</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main" id="main-content">
+
+    <!-- Hero -->
+    <section class="subhero">
+      <div class="container subhero-grid">
+        <div class="subhero-copy reveal hero-entrance">
+          <p class="section-tag">Univers culturel</p>
+          <h1>Univers culturel</h1>
+          <p>
+            Univers culturel que je partage avec <strong>A.C.F.M.R</strong>,
+            l'Association Culturelle Franco-Musulmane de Rillieux-la-Pape,
+            qui dirige à la grande mosquée <strong>l'école AL-HIDAYA</strong>,
+            traduction française : <em>école de la Guidée</em>.
+          </p>
+          <a class="btn btn-primary nav-link-transition" data-target-logo="logo.png" href="index.html">← Retour à l'accueil</a>
+        </div>
+        <div class="hero-visual reveal hero-entrance-delay">
+          <div class="hero-core-glow"></div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="ring ring-4"></div>
+          <img alt="École AL-HIDAYA" class="hero-logo" src="ecole_mosquee.png"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker culture -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">École AL-HIDAYA</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Langue arabe</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Éducation islamique</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Plateforme Nextcloud</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Dématérialisation</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Suivi des élèves</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Communication parents</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Registre d'appel numérique</span><span class="ticker-dot">◆</span>
+        <!-- Duplicate -->
+        <span class="ticker-item">École AL-HIDAYA</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Langue arabe</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Éducation islamique</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Plateforme Nextcloud</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Dématérialisation</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Suivi des élèves</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Communication parents</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Registre d'appel numérique</span><span class="ticker-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- Counters -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="counters-strip reveal">
+          <div class="counter-item">
+            <span class="counter-value" data-target="20" data-suffix="+">0+</span>
+            <span class="counter-label">Années d'existence de l'école</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="7" data-suffix="">0</span>
+            <span class="counter-label">Années de cursus</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="1" data-suffix="">0</span>
+            <span class="counter-label">Plateforme numérique déployée</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="6" data-suffix="-15">0</span>
+            <span class="counter-label">Tranche d'âge des élèves (ans)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo mosquée -->
+    <section class="section">
+      <div class="container">
+        <div class="content-grid vertical-premium">
+          <div class="content-card premium-block about-block media-showcase reveal">
+            <span class="block-kicker">La grande mosquée de Rillieux-la-Pape</span>
+            <img alt="Mosquée de Rillieux-La-Pape" src="Mosquee.JPG"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Présentation -->
+    <section class="section">
+      <div class="container">
+        <p class="section-tag">Présentation</p>
+        <h2>École AL-HIDAYA</h2>
+
+        <div class="content-grid vertical-premium">
+
+          <div class="content-card premium-block about-block reveal">
+            <span class="block-kicker">À propos</span>
+            <p>
+              Depuis plus de vingt ans, l'école AL-HIDAYA accueille des enfants âgés de six à quinze ans
+              et leur propose un cursus de sept années, axé sur l'apprentissage de la langue arabe ainsi que
+              sur la transmission des valeurs de la religion musulmane.
+            </p>
+            <p>
+              Ayant moi-même suivi une partie de ce parcours plus jeune, cette expérience m'a beaucoup apporté,
+              tant sur le plan personnel que dans l'apprentissage et la pratique de ma religion.
+            </p>
+            <p>
+              Dans une volonté de m'impliquer et de rendre ce que j'ai reçu, j'ai accepté le poste de secrétaire
+              de l'école AL-HIDAYA, proposé par le directeur, qui fut également mon enseignant.
+            </p>
+          </div>
+
+          <div class="content-card premium-block reveal">
+            <span class="block-kicker">Rôle</span>
+            <h3>Mes principales responsabilités et objectifs</h3>
+            <div class="responsibility-groups">
+              <div class="responsibility-group">
+                <h4>Coordination</h4>
+                <ul class="content-list">
+                  <li>Assurer la communication entre la direction, les parents et les professeurs</li>
+                  <li>Faciliter la circulation des informations importantes</li>
+                  <li>Maintenir un lien clair entre les différentes parties</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Suivi des élèves</h4>
+                <ul class="content-list">
+                  <li>Gérer les situations liées aux élèves : absences, maladies, retards, suivi courant</li>
+                  <li>Traiter les besoins du quotidien avec réactivité</li>
+                  <li>Garantir une continuité administrative simple et efficace</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Appui à la direction</h4>
+                <ul class="content-list">
+                  <li>Épauler la direction dans ses tâches quotidiennes</li>
+                  <li>Participer à l'organisation générale de l'école</li>
+                  <li>Contribuer à la modernisation des outils et méthodes</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Vision</h4>
+                <ul class="content-list">
+                  <li>Structurer un cadre de travail plus fluide</li>
+                  <li>Améliorer le suivi pédagogique et administratif</li>
+                  <li>Accompagner l'école dans son développement numérique</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card premium-block reveal">
+            <span class="block-kicker">Compétences</span>
+            <h3>Compétences mobilisées</h3>
+            <div class="responsibility-groups">
+              <div class="responsibility-group">
+                <h4>Organisation &amp; administratif</h4>
+                <div class="skills-pills">
+                  <span class="skill-pill">Gestion administrative et organisation</span>
+                  <span class="skill-pill">Suivi des dossiers et des informations</span>
+                  <span class="skill-pill">Polyvalence et adaptabilité</span>
+                </div>
+              </div>
+              <div class="responsibility-group">
+                <h4>Communication &amp; relationnel</h4>
+                <div class="skills-pills">
+                  <span class="skill-pill">Communication avec les parents et les enseignants</span>
+                  <span class="skill-pill">Accueil et accompagnement des familles</span>
+                  <span class="skill-pill">Sens du relationnel et écoute</span>
+                </div>
+              </div>
+              <div class="responsibility-group">
+                <h4>Gestion du quotidien</h4>
+                <div class="skills-pills">
+                  <span class="skill-pill">Gestion des absences et des élèves malades</span>
+                  <span class="skill-pill">Suivi des situations courantes</span>
+                  <span class="skill-pill">Réactivité face aux imprévus</span>
+                </div>
+              </div>
+              <div class="responsibility-group">
+                <h4>Professionnalisme</h4>
+                <div class="skills-pills">
+                  <span class="skill-pill">Rigueur et sens des responsabilités</span>
+                  <span class="skill-pill">Discrétion et respect de la confidentialité</span>
+                  <span class="skill-pill">Travail en équipe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card premium-block reveal">
+            <span class="block-kicker">Projet</span>
+            <h3>L'école AL-HIDAYA passe au numérique</h3>
+            <p>
+              À mon arrivée, j'ai rapidement constaté que l'ensemble des processus
+              (inscriptions, registre d'appel, suivi des élèves, notation) étaient entièrement gérés sur papier.
+              Afin de moderniser le fonctionnement de l'école, j'ai conçu et déployé, avec l'accord de la direction, une solution numérique basée sur un serveur Nextcloud hébergé sur mon infrastructure personnelle, inspirée du fonctionnement de Pronote.
+            </p>
+            <p>
+              Après plusieurs semaines de travail, la plateforme
+              <strong><a href="https://ecole.al-hidaya.fr" rel="noopener noreferrer" target="_blank" style="color:var(--accent-2);text-decoration:underline;text-underline-offset:3px">ecole.al-hidaya.fr</a></strong>
+              a été déployée et est aujourd'hui utilisée par l'ensemble de l'administration et des enseignants,
+              avec un accès prochain pour les élèves.
+            </p>
+            <div class="responsibility-groups">
+              <div class="responsibility-group">
+                <h4>Ce que la plateforme permet</h4>
+                <ul class="content-list">
+                  <li>Centraliser les supports pédagogiques : leçons d'éducation islamique et manuels de langue arabe</li>
+                  <li>Permettre aux enseignants de saisir directement les notes et appréciations pour les bulletins semestriels</li>
+                  <li>Dématérialiser le registre d'appel avec un suivi en temps réel des présences</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Application complémentaire</h4>
+                <p>
+                  Dans cette continuité, j'ai développé une application avec une interface simple et intuitive,
+                  permettant d'envoyer en un clic des messages préenregistrés (absences, retards, informations diverses)
+                  aux deux parents de l'élève, avec insertion automatique des informations le concernant.
+                </p>
+              </div>
+            </div>
+            <p>Le projet n'en est qu'à ses débuts, et de nouvelles fonctionnalités seront prochainement mises en place.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button aria-label="Retour en haut" class="back-to-top" id="back-to-top" type="button">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SG — Sid Ali GRINE</strong>
+        <p>Pôle Culture &amp; école AL-HIDAYA</p>
+      </div>
+      <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

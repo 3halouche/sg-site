@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SG — Sid Ali GRINE</title>
+  <meta content="Identité digitale à la croisée du tech, de la scène et de la création. Portfolio de Sid Ali GRINE." name="description"/>
+  <meta content="SG, Sid Ali Grine, informatique, événementiel, culture, portfolio" name="keywords"/>
+  <meta content="#060e1a" name="theme-color"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="SG — Sid Ali GRINE"/>
+  <meta property="og:description" content="Team Leader IT chez XEFI, régisseur son événementiel et secrétaire de l'école AL-HIDAYA. Trois univers, une seule passion : l'informatique."/>
+  <meta property="og:image" content="og-image.png"/>
+  <meta property="og:locale" content="fr_FR"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="SG — Sid Ali GRINE"/>
+  <meta name="twitter:description" content="Team Leader IT, régisseur son événementiel et acteur du numérique éducatif."/>
+  <meta name="twitter:image" content="og-image.png"/>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+
+<body class="page-transition">
+  <!-- Curseur custom -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Intro cinématique -->
+    <div class="intro-grid-lines"></div>
+    <div class="intro-beam intro-beam-a"></div>
+    <div class="intro-beam intro-beam-b"></div>
+    <div class="intro-core"></div>
+    <div class="intro-ring intro-ring-a"></div>
+    <div class="intro-ring intro-ring-b"></div>
+    <img alt="SG logo" class="intro-logo" src="logo.png"/>
+    <div class="intro-title">SG — SID ALI GRINE</div>
+  </div>
+
+  <!-- Effets d'ambiance -->
+  <canvas aria-hidden="true" id="particles"></canvas>
+  <div aria-hidden="true" class="screen-noise"></div>
+  <div aria-hidden="true" class="halo halo-left parallax-medium" data-parallax-speed="0.08"></div>
+  <div aria-hidden="true" class="halo halo-right parallax-medium" data-parallax-speed="0.12"></div>
+  <div aria-hidden="true" class="page-flash"></div>
+
+  <!-- Transition fusion -->
+  <div aria-hidden="true" class="fusion-transition" id="fusion-transition">
+    <div class="fusion-stage">
+      <div class="fusion-glow"></div>
+      <img alt="" class="fusion-logo fusion-logo-sg" src="logo.png"/>
+      <img alt="" class="fusion-logo fusion-logo-target" id="fusion-target-logo" src="logo.png"/>
+      <div class="fusion-line fusion-line-a"></div>
+      <div class="fusion-line fusion-line-b"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand nav-link-transition" data-target-logo="logo.png" href="index.html">
+        <img alt="Logo SG" src="logo.png"/>
+        <div>
+          <strong>SG</strong>
+          <span>Sid Ali GRINE</span>
+        </div>
+      </a>
+
+      <div style="display:flex;align-items:center;gap:8px">
+        <button aria-label="Changer le thème" class="theme-toggle" id="theme-toggle" type="button">☀️</button>
+        <button aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰</button>
+      </div>
+
+      <nav aria-label="Navigation principale" class="nav-links" id="main-navigation">
+        <a class="nav-link-transition is-active" data-target-logo="logo.png" href="index.html">Accueil</a>
+        <a class="nav-link-transition" data-target-logo="xefi.png" href="informatique.html">Univers Informatique</a>
+        <a class="nav-link-transition" data-target-logo="lions.png" href="humour.html">Univers Événementiel</a>
+        <a class="nav-link-transition" data-target-logo="ecole_mosquee.png" href="mosquee.html">Univers Culturel</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero hero-cinematic">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal hero-entrance">
+          <p class="eyebrow hero-badge">PERSONAL BRAND • TECH • SCÈNE • IDENTITÉ</p>
+          <div class="hero-watermark parallax-slow" data-parallax-speed="0.15">SG</div>
+
+          <h1 class="hero-title-v7">
+            <span class="title-sg">SG</span>
+            <span class="title-name">SID ALI GRINE</span>
+          </h1>
+
+          <div class="hero-line"></div>
+
+          <p class="lead hero-lead-v7">
+            <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#univers">Explorer</a>
+            <a class="btn btn-secondary" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="hero-metrics hero-metrics-v7">
+            <a class="metric-card nav-link-transition metric-ripple" data-target-logo="xefi.png" href="informatique.html">
+              <strong>01</strong>
+              <span>Informatique<br/><small>Management terrain • support N2/N3 • pilotage d'équipe</small></span>
+            </a>
+
+            <a class="metric-card nav-link-transition metric-ripple" data-target-logo="lions.png" href="humour.html">
+              <strong>02</strong>
+              <span>Événementiel<br/><small>Régie son • ambiance live • coordination scénique</small></span>
+            </a>
+
+            <a class="metric-card nav-link-transition metric-ripple" data-target-logo="ecole_mosquee.png" href="mosquee.html">
+              <strong>03</strong>
+              <span>Culture &amp; école<br/><small>Plateforme pédagogique • dématérialisation • communication</small></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal hero-entrance-delay">
+          <div class="hero-core-glow"></div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="ring ring-4"></div>
+          <img alt="SG Logo" class="hero-logo" src="logo.png"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Univers -->
+    <section class="section" id="univers">
+      <div class="container">
+        <p class="section-tag center">Univers</p>
+        <h2 class="center">Trois univers, un seul point commun — <strong>l'informatique</strong></h2>
+        <p class="section-sub center">
+          Ce n'est que le début d'une longue vie numérique.
+        </p>
+
+        <div class="cards-grid">
+          <a class="flip-card tilt-card auto-flip holo-card nav-link-transition flip-delay" data-target-logo="xefi.png" href="informatique.html">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card-visual">
+                  <img alt="XEFI" src="xefi.png"/>
+                </div>
+                <h3>Univers Informatique</h3>
+                <p>Gestion opérationnelle terrain, support, coordination des activités et optimisation continue.</p>
+                <span class="card-cta">Ouvrir</span>
+              </div>
+              <div class="flip-card-back">
+                <div class="stat-card">
+                  <h3>2021</h3>
+                  <p>Entrée chez XEFI sur le projet AURA pour la maintenance et le déploiement IT en établissements scolaires.</p>
+                  <span class="card-cta">Voir plus</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="flip-card tilt-card auto-flip delay-1 holo-card nav-link-transition flip-delay" data-target-logo="lions.png" href="humour.html">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card-visual">
+                  <img alt="Les Lions du Rire" src="lions.png"/>
+                </div>
+                <h3>Univers Événementiel</h3>
+                <p>Régie son, transitions, ambiance, préparation technique et coordination avec artistes et équipes.</p>
+                <span class="card-cta">Ouvrir</span>
+              </div>
+              <div class="flip-card-back">
+                <div class="stat-card">
+                  <h3>+10 ans</h3>
+                  <p>Implication dans l'univers événementiel, avec une place construite sur la durée dans la régie son et l'ambiance scénique.</p>
+                  <span class="card-cta">Voir plus</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="flip-card tilt-card auto-flip delay-2 holo-card nav-link-transition flip-delay" data-target-logo="ecole_mosquee.png" href="mosquee.html">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card-visual">
+                  <img alt="École de la mosquée" src="ecole_mosquee.png"/>
+                </div>
+                <h3>Univers Culturel</h3>
+                <p>Une page plus sobre pour la présentation de l'école et du cadre culturel.</p>
+                <span class="card-cta">Ouvrir</span>
+              </div>
+              <div class="flip-card-back">
+                <div class="stat-card">
+                  <h3>1 plateforme</h3>
+                  <p>Projet concret de numérisation scolaire avec portail enseignants, suivi d'appel et communication parents.</p>
+                  <span class="card-cta">Voir plus</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker compétences -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Management d'équipe</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Support N2/N3</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Régie son live</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Déploiement IT</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Coordination scénique</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Administration systèmes</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Gestion de parc</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Plateforme Nextcloud</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Relation client</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Transitions musicales</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Pilotage opérationnel</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Dématérialisation</span>
+        <span class="ticker-dot">◆</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="ticker-item">Management d'équipe</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Support N2/N3</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Régie son live</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Déploiement IT</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Coordination scénique</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Administration systèmes</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Gestion de parc</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Plateforme Nextcloud</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Relation client</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Transitions musicales</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Pilotage opérationnel</span>
+        <span class="ticker-dot">◆</span>
+        <span class="ticker-item">Dématérialisation</span>
+        <span class="ticker-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- Chiffres clés -->
+    <section class="section section-alt" id="chiffres">
+      <div class="container">
+        <p class="section-tag center">Chiffres clés</p>
+        <h2 class="center">En quelques chiffres</h2>
+
+        <div class="counters-strip reveal">
+          <div class="counter-item">
+            <span class="counter-value" data-target="4" data-suffix="+">0+</span>
+            <span class="counter-label">Années chez XEFI</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="4" data-suffix="">0</span>
+            <span class="counter-label">Techniciens supervisés</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="10" data-suffix="+">0+</span>
+            <span class="counter-label">Ans de régie son</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="1" data-suffix="">0</span>
+            <span class="counter-label">Plateforme éducative déployée</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours -->
+    <section class="section section-alt" id="parcours">
+      <div class="container two-col">
+        <div class="glass reveal">
+          <p class="section-tag">Parcours</p>
+          <h2>Du terrain à la coordination.</h2>
+          <p>
+            Passionné d'informatique depuis toujours, j'ai transformé cette passion en métier.
+            Aujourd'hui Team Leader chez XEFI, régisseur son pour Les Lions du Rire
+            et secrétaire de l'école AL-HIDAYA, je conjugue technique, organisation
+            et engagement au quotidien.
+          </p>
+        </div>
+
+        <div class="stack reveal">
+          <div class="stack-card">
+            <strong>2021</strong>
+            <span>Intégration chez XEFI — technicien conseil sur le projet AURA</span>
+          </div>
+          <div class="stack-card orange">
+            <strong>2024</strong>
+            <span>Évolution Team Leader — pilotage d'une équipe de 4 techniciens</span>
+          </div>
+          <div class="stack-card">
+            <strong>+10 ans</strong>
+            <span>Régisseur son officiel — Les Lions du Rire, VilleurVanne et autres festivals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-tag">Contact</p>
+          <h2>Envie de collaborer ?</h2>
+          <p>
+            Que ce soit pour un projet informatique, un événement à sonoriser
+            ou une initiative culturelle, n'hésitez pas à me contacter.
+            Je serai ravi d'échanger avec vous.
+          </p>
+          <p class="section-sub">
+            Basé à <strong>Lyon / Rillieux-la-Pape</strong> — disponible en Auvergne-Rhône-Alpes et au-delà.
+          </p>
+        </div>
+
+        <!-- Formspree : remplace YOUR_FORM_ID par ton ID Formspree (gratuit sur formspree.io) -->
+        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+          <label>
+            <span>Nom</span>
+            <input name="name" placeholder="Votre nom" required type="text"/>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" placeholder="votre@email.com" required type="email"/>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" placeholder="Décrivez votre projet ou votre demande..." required rows="5"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Envoyer le message</button>
+          <p class="form-hint" id="contact-notice" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Retour en haut -->
+  <button aria-label="Retour en haut" class="back-to-top" id="back-to-top" type="button">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SG — Sid Ali GRINE</strong>
+        <p>Lyon / Rillieux-la-Pape — <span id="current-year"></span></p>
+      </div>
+      <div class="footer-links">
+        <!-- Remplace # par ton URL LinkedIn -->
+        <a href="#" target="_blank" rel="noopener noreferrer" style="color:var(--accent-2);font-weight:600">LinkedIn</a>
+        <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

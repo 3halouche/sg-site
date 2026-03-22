@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#060e1a" name="theme-color"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <title>Humour &amp; Scène — SG</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="page-transition">
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <div class="intro-screen intro-screen-sub" id="intro-screen">
+    <div class="intro-grid-lines"></div>
+    <div class="intro-beam intro-beam-a"></div>
+    <div class="intro-beam intro-beam-b"></div>
+    <div class="intro-core"></div>
+    <div class="intro-ring intro-ring-a"></div>
+    <div class="intro-ring intro-ring-b"></div>
+    <img alt="SG logo" class="intro-logo" src="logo.png"/>
+    <div class="intro-title">Humour &amp; Scène</div>
+  </div>
+
+  <canvas aria-hidden="true" id="particles"></canvas>
+  <div aria-hidden="true" class="screen-noise"></div>
+  <div aria-hidden="true" class="halo halo-left"></div>
+  <div aria-hidden="true" class="halo halo-right"></div>
+  <div aria-hidden="true" class="page-flash"></div>
+
+  <div aria-hidden="true" class="fusion-transition" id="fusion-transition">
+    <div class="fusion-stage">
+      <div class="fusion-glow"></div>
+      <img alt="" class="fusion-logo fusion-logo-sg" src="logo.png"/>
+      <img alt="" class="fusion-logo fusion-logo-target" id="fusion-target-logo" src="logo.png"/>
+      <div class="fusion-line fusion-line-a"></div>
+      <div class="fusion-line fusion-line-b"></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand nav-link-transition" data-target-logo="logo.png" href="index.html">
+        <img alt="Logo SG" src="logo.png"/>
+        <div><strong>SG</strong><span>Sid Ali GRINE</span></div>
+      </a>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button aria-label="Changer le thème" class="theme-toggle" id="theme-toggle" type="button">☀️</button>
+        <button aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" type="button">☰</button>
+      </div>
+      <nav aria-label="Navigation principale" class="nav-links" id="main-navigation">
+        <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+        <a class="nav-link-transition" data-target-logo="xefi.png" href="informatique.html">Univers Informatique</a>
+        <a class="nav-link-transition is-active" data-target-logo="lions.png" href="humour.html">Univers Événementiel</a>
+        <a class="nav-link-transition" data-target-logo="ecole_mosquee.png" href="mosquee.html">Univers Culturel</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="subpage-main" id="main-content">
+
+    <!-- Hero -->
+    <section class="subhero">
+      <div class="container subhero-grid">
+        <div class="subhero-copy reveal hero-entrance">
+          <p class="section-tag">Univers scénique</p>
+          <h1>Humour &amp; Scène</h1>
+          <p>Univers Événementiel que je partage avec l'association Ouhlala Lyon et le Festival Les Lions Du Rire, tous deux fondés par Farid NASRI. Depuis plus de 12 ans, il s'engage activement pour promouvoir la solidarité, la culture, le sport et l'entraide sociale à Lyon et au-delà.</p>
+          <a class="btn btn-primary nav-link-transition" data-target-logo="logo.png" href="index.html">← Retour à l'accueil</a>
+        </div>
+        <div class="hero-visual reveal hero-entrance-delay">
+          <div class="hero-core-glow"></div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="ring ring-4"></div>
+          <img alt="Les Lions du Rire" class="hero-logo" src="lions.png"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker scène -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Régie son live</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Les Lions du Rire</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">VilleurVanne</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Vaulx Mieux En Rire</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Transitions musicales</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Coordination artistes</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Ambiance sonore</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Ouhlala Lyon</span><span class="ticker-dot">◆</span>
+        <!-- Duplicate -->
+        <span class="ticker-item">Régie son live</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Les Lions du Rire</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">VilleurVanne</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Vaulx Mieux En Rire</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Transitions musicales</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Coordination artistes</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Ambiance sonore</span><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Ouhlala Lyon</span><span class="ticker-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- Counters -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="counters-strip reveal">
+          <div class="counter-item">
+            <span class="counter-value" data-target="10" data-suffix="+">0+</span>
+            <span class="counter-label">Années de régie son</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="5" data-suffix="+">0+</span>
+            <span class="counter-label">Festivals & événements</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="50" data-suffix="+">0+</span>
+            <span class="counter-label">Artistes accompagnés</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-value" data-target="1" data-suffix="">0</span>
+            <span class="counter-label">Passion depuis le jour 1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Présentation -->
+    <section class="section">
+      <div class="container">
+        <p class="section-tag">Présentation</p>
+        <h2>Une page dédiée à la scène et à l'énergie visuelle</h2>
+
+        <div class="content-grid vertical-premium">
+
+          <div class="content-card reveal premium-block about-block">
+            <span class="block-kicker">À propos</span>
+            <p>Il y a maintenant 10 ans, j'ai rejoint Farid dans une aventure qui a commencé de manière inattendue, lors d'un tournoi de football en salle. J'accompagnais mon père et son équipe ce jour-là, et au-delà de l'ambiance sportive — le bruit des baskets sur le parquet, les sifflets et les encouragements du public — il manquait selon moi un élément essentiel : la musique.</p>
+            <p>J'ai alors proposé à Farid d'ajouter une ambiance musicale, une initiative qui s'est rapidement révélée indispensable. Suite à cette première collaboration, il m'a invité à participer aux castings du festival Les Lions du Rire. Malgré un niveau artistique élevé, les transitions entre les humoristes manquaient de dynamisme. J'ai donc apporté une touche musicale pour rythmer les passages, ce qui a considérablement amélioré l'expérience.</p>
+            <p>Depuis ce jour, j'interviens en tant que régisseur son officiel sur plusieurs événements, dont le Festival Les Lions du Rire, Vaulx Mieux En Rire, VilleurVanne, et bien d'autres.</p>
+          </div>
+
+          <div class="content-card reveal premium-block responsibilities-block">
+            <span class="block-kicker">Organisation</span>
+            <h3>Mes principales responsabilités</h3>
+            <div class="responsibility-groups">
+              <div class="responsibility-group">
+                <h4>Préparation technique</h4>
+                <ul class="content-list">
+                  <li>Préparer et installer le matériel son selon les besoins</li>
+                  <li>Anticiper les contraintes techniques et vérifier que tout fonctionne correctement</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Régie &amp; live</h4>
+                <ul class="content-list">
+                  <li>Gérer le son en direct pendant les événements</li>
+                  <li>Assurer des transitions fluides et une bonne ambiance sonore</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Organisation &amp; coordination</h4>
+                <ul class="content-list">
+                  <li>Travailler avec les équipes techniques et les artistes</li>
+                  <li>S'adapter au déroulé et aux contraintes du planning</li>
+                </ul>
+              </div>
+              <div class="responsibility-group">
+                <h4>Qualité &amp; expérience public</h4>
+                <ul class="content-list">
+                  <li>Veiller à un bon rendu sonore pour le public</li>
+                  <li>Participer au rythme et à l'ambiance des spectacles</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card reveal premium-block skills-block">
+            <span class="block-kicker">Expertise</span>
+            <h3>Compétences</h3>
+            <div class="skills-pills">
+              <span class="skill-pill">Gestion du son en live</span>
+              <span class="skill-pill">Installation et réglage du matériel audio</span>
+              <span class="skill-pill">Gestion des balances</span>
+              <span class="skill-pill">Enchaînement et transitions musicales</span>
+              <span class="skill-pill">Adaptation aux imprévus</span>
+              <span class="skill-pill">Travail avec les artistes et les équipes</span>
+              <span class="skill-pill">Sens de l'ambiance et du rythme</span>
+              <span class="skill-pill">Bonne écoute et réactivité</span>
+            </div>
+          </div>
+
+          <!-- Audio bars visual -->
+          <div class="stage-sound-visual">
+            <div class="spotlight spotlight-left"></div>
+            <div class="spotlight spotlight-right"></div>
+            <div class="audio-bars">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="stage-label">Régie son • Live • Événementiel</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="section-tag">Galerie</p>
+        <h2>Moments de scène</h2>
+        <p class="section-sub">Quelques souvenirs d'événements — remplace les placeholders par tes propres photos et vidéos.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-video">
+            <div class="play-icon">▶</div>
+            <span>Les Lions du Rire<br/><small style="opacity:.6">Remplace par ton lien YouTube</small></span>
+          </div>
+          <div class="gallery-item gallery-video">
+            <div class="play-icon">▶</div>
+            <span>VilleurVanne<br/><small style="opacity:.6">Remplace par ton lien YouTube</small></span>
+          </div>
+          <div class="gallery-item gallery-video">
+            <div class="play-icon">▶</div>
+            <span>Vaulx Mieux En Rire<br/><small style="opacity:.6">Remplace par ton lien YouTube</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button aria-label="Retour en haut" class="back-to-top" id="back-to-top" type="button">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SG — Sid Ali GRINE</strong>
+        <p>Pôle Humour &amp; Scène — Régie son</p>
+      </div>
+      <a class="nav-link-transition" data-target-logo="logo.png" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
